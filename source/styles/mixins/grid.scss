@@ -1,0 +1,51 @@
+$break-sm: 576px;
+$break-md: 768px;
+$break-lg: 1280px;
+$break-xl: 1600px;
+$break-xxl: 1920px;
+
+@mixin sm-block() {
+  @media screen and (width >= $break-sm) {
+    @content;
+  }
+}
+
+@mixin md-block() {
+  @media screen and (width >= $break-md) {
+    @content;
+  }
+}
+
+@mixin lg-block() {
+  @media screen and (width >= $break-lg) {
+    @content;
+  }
+}
+
+@mixin xl-block() {
+  @media screen and (width >= $break-xl) {
+    @content;
+  }
+}
+
+@mixin xxl-block() {
+  @media screen and (width >= $break-xxl) {
+    @content;
+  }
+}
+
+@mixin hover() {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin hover-is-hot-href() {
+  @media (any-hover: hover) {
+    &:hover:is([href]) {
+      @content;
+    }
+  }
+}

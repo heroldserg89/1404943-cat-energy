@@ -1,0 +1,68 @@
+@use "./../mixins/grid.scss";
+
+.main-footer {
+  background-color: var(--background-color-secondary, #ffffff);
+}
+
+.main-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  padding-block: 40px;
+
+  @include grid.md-block {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @include grid.lg-block {
+    padding-block: 50px;
+  }
+}
+
+.main-footer__social {
+  width: 100%;
+  border-block: 1px solid #d9d9d9;
+
+  @include grid.md-block {
+    border: none;
+    width: auto;
+    margin-left: 37px;
+  }
+}
+
+.main-footer__developer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 20px;
+  color: #444444;
+  text-decoration: none;
+  column-gap: 23px;
+
+  @include grid.hover {
+    &::after {
+      background-color: var(--background-color-accent, #68b738);
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @include grid.md-block {
+    width: unset;
+    justify-content: unset;
+  }
+}
+
+.main-footer__developer::after {
+  content: "";
+  width: 27px;
+  height: 34px;
+  mask-image: url("./../../icons/logo-htmlacademy.svg");
+  background-color: #666666;
+}

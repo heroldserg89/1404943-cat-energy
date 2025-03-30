@@ -1,7 +1,15 @@
 /* GLOBAL */
-@import "./common/variables.scss";
-@import "./common/global.scss";
-@import "./common/fonts.scss";
+@use "./mixins/grid.scss";
+@use "./common/variables.scss";
+@use "./common/fonts.scss";
+@use "./common/global.scss";
 
 /* BLOCKS */
-@import "./blocks/header.scss";
+@use "./blocks/main-header.scss";
+@use "./blocks/burger.scss";
+@use "./blocks/nav-site.scss";
+@use "./blocks/logo.scss";
+@use "./blocks/hero.scss";
+@use "./blocks/button.scss";
+@use "./blocks/main-footer.scss";
+@use "./blocks/social-list.scss";

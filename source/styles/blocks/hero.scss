@@ -1,0 +1,164 @@
+@use "../mixins/grid.scss";
+@use "../common/variables";
+
+.hero {
+  font-family: var(--font-family-secondary, oswald), sans-serif;
+  color: var(--color-text-secondary, #ffffff);
+  position: relative;
+
+  @include grid.md-block {
+    color: var(--color-text, #000000);
+  }
+
+  @include grid.lg-block {
+    position: static;
+    min-height: 520px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    inset: 0 0 auto;
+    height: 63%;
+    z-index: -2;
+
+    @include grid.md-block {
+      display: none;
+    }
+
+    @include grid.lg-block {
+      display: block;
+      left: 50%;
+      height: 100%;
+    }
+  }
+
+  &::before {
+    background-image:
+      image-set(
+        "../../images/hero/hero-bg@1x.webp" 1x type("image/webp"),
+        "../../images/hero/hero-bg@1x.png" 1x type("image/jpeg"),
+        "../../images/hero/hero-bg@2x.webp" 2x type("image/webp"),
+        "../../images/hero/hero-bg@2x.png" 2x type("image/jpeg"),
+      ),
+      linear-gradient(90deg, #515055, #403f44);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include grid.lg-block {
+      background-image:
+        image-set(
+          "../../images/hero/hero-bg-desktop@1x.webp" 1x type("image/webp"),
+          "../../images/hero/hero-bg-desktop@1x.png" 1x type("image/jpeg"),
+          "../../images/hero/hero-bg-desktop@2x.webp" 2x type("image/webp"),
+          "../../images/hero/hero-bg-desktop@2x.png" 2x type("image/jpeg")
+        ),
+        linear-gradient(90deg, #515055, #403f44);
+      background-position: left center;
+      background-size: auto 100%;
+    }
+  }
+
+  &::after {
+    background-color: rgba(#68b738, 0.85);
+  }
+}
+
+.hero__wrapper {
+  min-height: 480px;
+  padding-top: 27px;
+
+  @include grid.md-block {
+    padding-top: 40px;
+    min-height: 830px;
+  }
+
+  @include grid.lg-block {
+    padding-top: 50px;
+  }
+}
+
+.hero__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  @include grid.md-block {
+    padding-inline: 90px;
+    text-align: left;
+  }
+
+  @include grid.lg-block {
+    padding-inline: 80px;
+    width: 50%;
+  }
+}
+
+.hero__title {
+  font-size: 36px;
+  line-height: 1;
+  margin-block: 0 25px;
+
+  @include grid.md-block {
+    font-size: 60px;
+    margin-bottom: 40px;
+  }
+}
+
+.hero__text {
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-block: 0 29px;
+
+  @include grid.md-block {
+    font-size: 20px;
+    margin-bottom: 45px;
+  }
+
+  @include grid.lg-block {
+    margin-bottom: 50px;
+  }
+}
+
+.hero__img-wrapper {
+  @include grid.md-block {
+    order: 10;
+    margin-inline: -90px;
+  }
+}
+
+.hero__img {
+  vertical-align: top;
+
+  @include grid.md-block {
+    position: absolute;
+    z-index: -1;
+    margin-top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @include grid.lg-block {
+    position: absolute;
+    left: auto;
+    margin-top: -80px;
+    right: -390px;
+    transform: translateX(0);
+    top: 0;
+  }
+}
+
+.hero__button {
+  margin-top: 3px;
+  min-width: 100%;
+
+  @include grid.md-block {
+    min-width: 242px;
+    align-self: start;
+  }
+}

@@ -1,1 +1,14 @@
 /* здесь используйте глобальные переменные */
+:root {
+  --font-family: lato;
+  --font-family-secondary: oswald;
+
+  --color-text: #000000;
+  --color-text-secondary: #ffffff;
+
+  --background-color: #ffffff;
+  --background-color-secondary: #f2f2f2;
+  --background-color-accent: #68b738;
+
+  --transition-duration: 0.2s;
+}

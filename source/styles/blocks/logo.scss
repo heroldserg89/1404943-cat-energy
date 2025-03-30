@@ -1,0 +1,38 @@
+@use "../mixins/grid.scss" as mixin;
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  @include mixin.md-block {
+    column-gap: 13px;
+  }
+
+  @include mixin.hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.logo__img {
+  &--text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include mixin.md-block {
+      position: static;
+      transform: translateX(0);
+    }
+
+    @include mixin.lg-block {
+      width: 118px;
+      height: 21px;
+    }
+  }
+}
