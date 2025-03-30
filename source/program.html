@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>Главная страница</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="style/style.css" rel="stylesheet">
+  <link href="styles/styles.css" rel="stylesheet">
   <script src="scripts/index.js" defer></script>
 </head>
 
@@ -54,7 +54,14 @@
         <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
       </div>
       <div class="contacts__maps">
-        <img class="contacts__maps-img" src="maps.jpg" width="320" height="400" alt="Карта">
+        <picture>
+          <source media="(min-width:1280px)" srcset="./images/maps/maps-desktop@1x.webp 1x, ./images/maps/maps-desktop@2x.webp 2x" width="1440" height="400" type="image/webp">
+          <source media="(min-width:1280px)" srcset="./images/maps/maps-desktop@1x.jpg 1x, ./images/maps/maps-desktop@2x.jpg 2x" width="1440" height="400" type="image/jpeg">
+          <source media="(min-width:768px)" srcset="./images/maps/maps-tablet@1x.webp 1x, ./images/maps/maps-tablet@2x.webp 2x" width="768" height="400" type="image/webp">
+          <source media="(min-width:768px)" srcset="./images/maps/maps-tablet@1x.jpg 1x, ./images/maps/maps-tablet@2x.jpg 2x" width="768" height="400" type="image/jpeg">
+          <source srcset="./images/maps/maps@1x.webp 1x, ./images/maps/maps@2x.webp 2x" type="image/webp">
+          <img class="contacts__maps-img" src="./images/maps/maps@1x.jpg" srcset="./images/maps/maps@2x.jpg 2x" width="320" height="382" alt="КартаК" loading="lazy">
+        </picture>
       </div>
     </div>
     <div class="main-footer__wrapper container">
