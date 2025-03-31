@@ -65,11 +65,13 @@
         <h2 class="visually-hidden">Программы питания</h2>
         <ul class="programs__list">
           <li class="programs__item">
+            <div class="programs__decor programs__decor--slim"></div>
             <h3 class="programs__title">Похудение</h3>
             <p class="programs__desc">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a class="programs__link" href="#">Каталог Slim</a>
           </li>
           <li class="programs__item">
+            <div class="programs__decor programs__decor--pro"></div>
             <h3 class="programs__title">Набор массы</h3>
             <p class="programs__desc">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
             <a class="programs__link" href="#">Каталог Pro</a>
@@ -81,16 +83,16 @@
       <div class="stages__wrapper container">
         <h2 class="stages__title">Как это работает</h2>
         <ol class="stages__list">
-          <li class="stages__item">
+          <li class="stages__item stages__item--leaf">
             <p class="stages__desc">Функциональное питание содержит только полезные питательные вещества.</p>
           </li>
-          <li class="stages__item">
+          <li class="stages__item stages__item--water">
             <p class="stages__desc">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
           </li>
-          <li class="stages__item">
+          <li class="stages__item stages__item--eat">
             <p class="stages__desc">Замените один-два приема обычной еды на наше функциональное питание.</p>
           </li>
-          <li class="stages__item">
+          <li class="stages__item stages__item--watch">
             <p class="stages__desc">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
           </li>
         </ol>
@@ -101,32 +103,37 @@
         <h2 class="example__title">Живой пример</h2>
         <p class="example__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
         <dl class="example__desc-list">
-          <div class="example__block">
+          <div class="example__block example__block--block">
             <dt class="example__desc-title">Снижение веса</dt>
             <dd class="example__desc-text">5 кг</dd>
           </div>
-          <div class="example__block">
+          <div class="example__block example__block--block">
             <dt class="example__desc-title">Затрачено времени</dt>
             <dd class="example__desc-text">60 дней</dd>
           </div>
-          <div class="example__block">
-            <dt class="example__desc-title">Затраты на питание:</dt>
-            <dd class="example__desc-text">15&nbsp;000 рублей</dd>
+          <div class="example__block example__block--line">
+            <dt class="example__desc-title">Затраты на питание: </dt>
+            <dd class="example__desc-text">15&nbsp;000 руб.</dd>
           </div>
         </dl>
         <div class="example__slider slider">
-          <picture>
-            <source media="(min-width:768px)" srcset="./images/slider/img-before-tablet@1x.webp 1x, ./images/slider/img-before-tablet@2x.webp 2x" width="560" height="512" type="image/webp">
-            <source media="(min-width:768px)" srcset="./images/slider/img-before-tablet@1x.png 1x, ./images/slider/img-before-tablet@2x.png 2x" width="560" height="512" type="image/png">
-            <source srcset="./images/slider/img-before@1x.webp 1x, ./images/slider/img-before@2x.webp 2x" type="image/webp">
-            <img class="slider__img slider__img--before" src="./images/slider/img-before@1x.png" srcset="./images/slider/img-before@2x.png 2x" width="280" height="256" alt="Фото кота до приема" loading="lazy">
-          </picture>
-          <picture>
-            <source media="(min-width:768px)" srcset="./images/slider/img-after-tablet@1x.webp 1x, ./images/slider/img-after-tablet@2x.webp 2x" width="560" height="512" type="image/webp">
-            <source media="(min-width:768px)" srcset="./images/slider/img-after-tablet@1x.png 1x, ./images/slider/img-after-tablet@2x.png 2x" width="560" height="512" type="image/png">
-            <source srcset="./images/slider/img-after@1x.webp 1x, ./images/slider/img-after@2x.webp 2x" type="image/webp">
-            <img class="slider__img slider__img--after" src="./images/slider/img-after@1x.png" srcset="./images/slider/img-after@2x.png 2x" width="280" height="256" alt="Фото кота после приема" loading="lazy">
-          </picture>
+          <button class="slider__button"></button>
+          <div class="slider__block slider__block--before">
+            <picture>
+              <source media="(min-width:768px)" srcset="./images/slider/img-before-tablet@1x.webp 1x, ./images/slider/img-before-tablet@2x.webp 2x" width="560" height="512" type="image/webp">
+              <source media="(min-width:768px)" srcset="./images/slider/img-before-tablet@1x.png 1x, ./images/slider/img-before-tablet@2x.png 2x" width="560" height="512" type="image/png">
+              <source srcset="./images/slider/img-before@1x.webp 1x, ./images/slider/img-before@2x.webp 2x" type="image/webp">
+              <img class="slider__img slider__img--before" src="./images/slider/img-before@1x.png" srcset="./images/slider/img-before@2x.png 2x" width="280" height="256" alt="Фото кота до приема" loading="lazy">
+            </picture>
+          </div>
+          <div class="slider__block slider__block--after">
+            <picture>
+              <source media="(min-width:768px)" srcset="./images/slider/img-after-tablet@1x.webp 1x, ./images/slider/img-after-tablet@2x.webp 2x" width="560" height="512" type="image/webp">
+              <source media="(min-width:768px)" srcset="./images/slider/img-after-tablet@1x.png 1x, ./images/slider/img-after-tablet@2x.png 2x" width="560" height="512" type="image/png">
+              <source srcset="./images/slider/img-after@1x.webp 1x, ./images/slider/img-after@2x.webp 2x" type="image/webp">
+              <img class="slider__img slider__img--after" src="./images/slider/img-after@1x.png" srcset="./images/slider/img-after@2x.png 2x" width="280" height="256" alt="Фото кота после приема" loading="lazy">
+            </picture>
+          </div>
         </div>
       </div>
     </section>
@@ -134,8 +141,10 @@
   <footer class="page__footer main-footer">
     <div class="main-footer__contacts contacts">
       <div class="contacts__wrapper container">
-        <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
-        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <div class="contacts__block">
+          <h2 class="contacts__title">Приглашаем<br> к сотрудничеству дилеров!</h2>
+          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        </div>
       </div>
       <div class="contacts__maps">
         <picture>
@@ -144,7 +153,7 @@
           <source media="(min-width:768px)" srcset="./images/maps/maps-tablet@1x.webp 1x, ./images/maps/maps-tablet@2x.webp 2x" width="768" height="400" type="image/webp">
           <source media="(min-width:768px)" srcset="./images/maps/maps-tablet@1x.jpg 1x, ./images/maps/maps-tablet@2x.jpg 2x" width="768" height="400" type="image/jpeg">
           <source srcset="./images/maps/maps@1x.webp 1x, ./images/maps/maps@2x.webp 2x" type="image/webp">
-          <img class="contacts__maps-img" src="./images/maps/maps@1x.jpg" srcset="./images/maps/maps@2x.jpg 2x" width="320" height="382" alt="КартаК" loading="lazy">
+          <img class="contacts__maps-img" src="./images/maps/maps@1x.jpg" srcset="./images/maps/maps@2x.jpg 2x" width="320" height="382" alt="Карта" loading="lazy">
         </picture>
       </div>
     </div>

@@ -1,0 +1,30 @@
+.contacts__wrapper {
+  background-color: var(--background-color, #ffffff);
+}
+
+.contacts__block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-block: 26px;
+}
+
+.contacts__title {
+  font-family: var(--font-family-secondary, "oswald"), "Arial", sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+}
+
+.contacts__address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.contacts__maps {
+  display: flex;
+  justify-content: center;
+  max-height: 382px;
+}
+

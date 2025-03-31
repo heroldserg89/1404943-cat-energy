@@ -1,0 +1,122 @@
+@use "./../mixins/grid.scss";
+.example {
+  background-color: #eaeaea;
+  @include grid.md-block {
+    background-image: linear-gradient(var(--background-color, #ffffff) 619px,#EAEAEA 619px );
+  }
+}
+
+.example__wrapper {
+  padding-block: 25px 40px;
+  @include grid.md-block {
+    padding-block: 45px 100px;
+  }
+}
+
+.example__title {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  font-family: var(--font-family-secondary, "Oswald"), "Arial", sans-serif;
+  margin-block: 0 40px;
+  @include grid.md-block {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+.example__desc {
+  margin-block: 0 20px;
+  @include grid.md-block {
+    margin-bottom: 55px;
+  }
+}
+
+.example__desc-list {
+  display: grid;
+  grid-template-columns: 124px 124px ;
+  justify-content: space-around;
+  gap: 18px 32px;
+  margin-block: 0 20px;
+  @include grid.md-block {
+    grid-template-columns: 162px 162px 1fr;
+    column-gap: 43px;
+    margin-bottom: 100px;
+  }
+}
+
+.example__desc-text {
+  margin-left: 0;
+  display: inline;
+
+}
+
+.example__desc-title {
+  display: inline;
+}
+
+.example__block {
+  display: flex;
+  text-align: center;
+  font-family: var(--font-family-secondary, "Oswald"), "Arial", sans-serif;
+
+}
+
+.example__block--block {
+  flex-direction: column;
+  align-items: center;
+
+  & .example__desc-title {
+    text-transform: lowercase;
+    font-family: var(--font-family, "Lato"), "Arial", sans-serif;
+    font-size: 12px;
+    line-height: 1;
+    width: calc(100% - (18px * 2) );
+    background-color: #eaeaea;
+    margin-top: -10px;
+    @include grid.md-block {
+      background-color: var(--background-color, #ffffff);
+      width: calc(100% - (10px * 2) );
+      display: inline-block;
+      font-size: 14px;
+      margin-top: -8px;
+    }
+  }
+
+  & .example__desc-text {
+    align-self: normal;
+    border: 1px solid #cdcdcd;
+    order: -1;
+    font-size: 24px;
+    line-height: 24px;
+    padding: 14px 14px 18px;
+    text-transform: uppercase;
+    @include grid.md-block {
+      font-size: 30px;
+      line-height: 37px;
+    }
+  }
+}
+
+.example__block--line {
+  display: inline-block;
+  text-transform: uppercase;
+  justify-content: center;
+  grid-column: -1 / 1;
+  font-size: 14px;
+  line-height: 20px;
+  @include grid.md-block {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    grid-column: auto;
+    justify-self: end;
+    text-align: right;
+    font-size: 20px;
+  }
+}
+
+.example__slider {
+  margin-inline: auto;
+}

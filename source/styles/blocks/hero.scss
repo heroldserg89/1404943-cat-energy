@@ -2,7 +2,7 @@
 @use "../common/variables";
 
 .hero {
-  font-family: var(--font-family-secondary, oswald), sans-serif;
+  font-family: var(--font-family-secondary, "Oswald"), "Arial", sans-serif;
   color: var(--color-text-secondary, #ffffff);
   position: relative;
 
@@ -12,7 +12,6 @@
 
   @include grid.lg-block {
     position: static;
-    min-height: 520px;
   }
 
   &::before,
@@ -78,6 +77,7 @@
 
   @include grid.lg-block {
     padding-top: 50px;
+    min-height: 520px;
   }
 }
 
@@ -102,6 +102,7 @@
   font-size: 36px;
   line-height: 1;
   margin-block: 0 25px;
+  font-weight: 400;
 
   @include grid.md-block {
     font-size: 60px;

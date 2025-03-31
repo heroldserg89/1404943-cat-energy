@@ -1,0 +1,120 @@
+@use "./../mixins/grid.scss";
+.stages {
+  @include grid.md-block {
+
+  }
+}
+.stages__wrapper {
+  padding-bottom: 50px;
+  @include grid.md-block {
+    border: 1px solid #e6e6e6;
+    padding-bottom: 5px;
+  }
+}
+
+.stages__title {
+  font-size: 36px;
+  line-height: 40px;
+  font-family: var(--font-family-secondary, "Oswald"), "Arial", sans-serif;
+  margin-block: 0 40px;
+
+  @include grid.md-block {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 72px;
+  }
+}
+
+.stages__list {
+  counter-reset: stages;
+  margin-block: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px 37px;
+
+  @include grid.md-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 37px 60px;
+  }
+}
+
+.stages__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+
+  @include grid.md-block {
+    row-gap: 31px;
+    min-height: 280px;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #68b738;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+
+
+    @include grid.md-block {
+      width: 80px;
+      height: 80px;
+
+    }
+  }
+
+  &--leaf::before {
+    background-image: url("./../../icons/icon-leaf.svg");
+    background-size: 30px 32px;
+  }
+
+  &--water::before {
+    background-image: url("./../../icons/icon-water.svg");
+    background-size: 26px 29px;
+  }
+
+  &--eat::before {
+    background-image: url("./../../icons/icon-eat.svg");
+    background-size: 25px 30px;
+  }
+
+  &--watch::before {
+    background-image: url("./../../icons/icon-watch.svg");
+    background-size: 26px 50px;
+  }
+
+  &::after {
+    counter-increment: stages;
+    content: counter(stages);
+    font-size: 280px;
+    line-height: 1;
+    font-family: var(--font-family-secondary, "Oswald"), "Arial", sans-serif;
+    display: none;
+
+    @include grid.md-block {
+      display: block;
+      position: absolute;
+      color: #f2f2f2;
+      z-index: -1;
+      top: -40px;
+      left: 115px;
+    }
+  }
+}
+
+.stages__desc {
+  margin-block: 0;
+
+  @include grid.md-block {
+    max-width: 245px;
+  }
+}

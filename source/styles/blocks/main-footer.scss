@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: center;
   row-gap: 20px;
-  padding-block: 40px;
+  padding-block: 35px 40px;
 
   @include grid.md-block {
     flex-direction: row;
