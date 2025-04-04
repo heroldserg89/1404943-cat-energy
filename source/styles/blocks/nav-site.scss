@@ -42,8 +42,10 @@
   color: inherit;
   border-top: 1px solid #e6e6e6;
   padding-inline: 20px;
+  transition-property: opacity;
+  transition-duration: var(--transition-duration, 0, 2s);
 
-  @include grid.hover-is-hot-href {
+  @include grid.hover {
     opacity: 0.6;
   }
 

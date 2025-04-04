@@ -45,6 +45,7 @@
   @include grid.md-block {
     position: relative;
     display: flex;
+    margin-right: 3px;
   }
 
   @include grid.lg-block {

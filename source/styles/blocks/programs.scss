@@ -1,10 +1,14 @@
 @use "./../mixins/grid.scss";
 
-.programs__wrapper {
+.programs {
   padding-block: 20px;
 
   @include grid.md-block {
     padding-bottom: 43px;
+  }
+
+  @include grid.lg-block {
+    padding-block: 82px 35px;
   }
 }
 
@@ -19,6 +23,12 @@
   @include grid.md-block {
     row-gap: 30px;
   }
+
+  @include grid.lg-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
 }
 
 .programs__item {
@@ -29,6 +39,10 @@
   @include grid.md-block {
     padding: 73px 320px 64px 53px;
   }
+
+  @include grid.lg-block {
+    padding: 77px 52px 65px;
+  }
 }
 
 .programs__decor {
@@ -38,6 +52,11 @@
   @include grid.md-block {
     top: 88px;
     right: 63px;
+  }
+
+  @include grid.lg-block {
+    top: 47px;
+    right: auto;
   }
 
   &::before {
@@ -51,6 +70,11 @@
     @include grid.md-block {
       width: 200px;
       height: 200px;
+    }
+
+    @include grid.lg-block {
+      width: 100px;
+      height: 100px;
     }
   }
 
@@ -75,6 +99,13 @@
       bottom: 17px;
       left: 30px;
     }
+
+    @include grid.lg-block {
+      width: 70px;
+      height: 97px;
+      bottom: 10px;
+      left: 15px;
+    }
   }
 
   &--pro::after {
@@ -89,6 +120,13 @@
       height: 112px;
       top: 44px;
       right: -34px;
+    }
+
+    @include grid.lg-block {
+      width: 134px;
+      height: 56px;
+      top: 20px;
+      right: -15px;
     }
   }
 }
@@ -108,6 +146,11 @@
     margin-left: 0;
     margin-bottom: 24px;
   }
+
+  @include grid.lg-block {
+    margin-left: 162px;
+    margin-bottom: 73px;
+  }
 }
 
 .programs__desc {
@@ -116,6 +159,10 @@
 
   @include grid.md-block {
     margin-bottom: 35px;
+  }
+
+  @include grid.lg-block {
+    margin-bottom: 8px;
   }
 }
 
@@ -133,6 +180,7 @@
   transition-duration: var(--transition-duration, 0.2s);
 
   @include grid.md-block {
+    font-size: 20px;
     column-gap: 25px;
   }
 
@@ -147,10 +195,6 @@
     background-size: 32px 12px;
     transition-property: width;
     transition-duration: var(--transition-duration, 0, 2s);
-  }
-
-  @include grid.md-block {
-    font-size: 20px;
   }
 
   @include grid.hover {

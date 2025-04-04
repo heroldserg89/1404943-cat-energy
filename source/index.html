@@ -100,24 +100,28 @@
     </section>
     <section class="example">
       <div class="example__wrapper container">
-        <h2 class="example__title">Живой пример</h2>
-        <p class="example__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <dl class="example__desc-list">
-          <div class="example__block example__block--block">
-            <dt class="example__desc-title">Снижение веса</dt>
-            <dd class="example__desc-text">5 кг</dd>
-          </div>
-          <div class="example__block example__block--block">
-            <dt class="example__desc-title">Затрачено времени</dt>
-            <dd class="example__desc-text">60 дней</dd>
-          </div>
-          <div class="example__block example__block--line">
-            <dt class="example__desc-title">Затраты на питание: </dt>
-            <dd class="example__desc-text">15&nbsp;000 руб.</dd>
-          </div>
-        </dl>
+        <div class="example__content">
+          <h2 class="example__title">Живой пример</h2>
+          <p class="example__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <dl class="example__desc-list">
+            <div class="example__block example__block--block">
+              <dt class="example__desc-title">Снижение веса</dt>
+              <dd class="example__desc-text">5 кг</dd>
+            </div>
+            <div class="example__block example__block--block">
+              <dt class="example__desc-title">Затрачено времени</dt>
+              <dd class="example__desc-text">60 дней</dd>
+            </div>
+            <div class="example__block example__block--line">
+              <dt class="example__desc-title">Затраты на питание:</dt>
+              <dd class="example__desc-text">15 000 руб.</dd>
+            </div>
+          </dl>
+        </div>
         <div class="example__slider slider">
-          <button class="slider__button"></button>
+          <button class="slider__button" type="button">
+            <span class="visually-hidden">Кнопка слайдера</span>
+          </button>
           <div class="slider__block slider__block--before">
             <picture>
               <source media="(min-width:768px)" srcset="./images/slider/img-before-tablet@1x.webp 1x, ./images/slider/img-before-tablet@2x.webp 2x" width="560" height="512" type="image/webp">
@@ -143,7 +147,8 @@
       <div class="contacts__wrapper container">
         <div class="contacts__block">
           <h2 class="contacts__title">Приглашаем<br> к сотрудничеству дилеров!</h2>
-          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8<span class="contacts__address-city">Санкт-Петербург</span>
+          </address>
         </div>
       </div>
       <div class="contacts__maps">

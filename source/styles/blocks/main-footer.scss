@@ -14,10 +14,11 @@
   @include grid.md-block {
     flex-direction: row;
     justify-content: space-between;
+    padding-block: 60px 40px;
   }
 
   @include grid.lg-block {
-    padding-block: 50px;
+    padding-block: 71px 50px;
   }
 }
 
