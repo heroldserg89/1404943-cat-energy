@@ -1,0 +1,13 @@
+.additional {
+  padding-block: 27px;
+}
+
+.additional__item-title {
+  font-family: var(--font-family-secondary, "Oswald"), "Arial", sans-serif;
+  text-transform: uppercase;
+}
+
+.additional__list {
+  margin-block: 0 35px;
+  padding-left: 0;
+}

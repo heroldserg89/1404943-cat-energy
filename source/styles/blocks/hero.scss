@@ -38,9 +38,9 @@
     background-image:
       image-set(
         "../../images/hero/hero-bg@1x.webp" 1x type("image/webp"),
-        "../../images/hero/hero-bg@1x.png" 1x type("image/jpeg"),
+        "../../images/hero/hero-bg@1x.png" 1x type("image/png"),
         "../../images/hero/hero-bg@2x.webp" 2x type("image/webp"),
-        "../../images/hero/hero-bg@2x.png" 2x type("image/jpeg"),
+        "../../images/hero/hero-bg@2x.png" 2x type("image/png"),
       ),
       linear-gradient(90deg, #515055, #403f44);
     background-repeat: no-repeat;
@@ -51,9 +51,9 @@
       background-image:
         image-set(
           "../../images/hero/hero-bg-desktop@1x.webp" 1x type("image/webp"),
-          "../../images/hero/hero-bg-desktop@1x.png" 1x type("image/jpeg"),
+          "../../images/hero/hero-bg-desktop@1x.png" 1x type("image/png"),
           "../../images/hero/hero-bg-desktop@2x.webp" 2x type("image/webp"),
-          "../../images/hero/hero-bg-desktop@2x.png" 2x type("image/jpeg")
+          "../../images/hero/hero-bg-desktop@2x.png" 2x type("image/png")
         ),
         linear-gradient(90deg, #515055, #403f44);
       background-position: left center;

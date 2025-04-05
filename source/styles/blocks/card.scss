@@ -1,0 +1,106 @@
+@use "./../mixins/grid.scss";
+
+.card {
+  position: relative;
+  padding-block: 20px 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 17px;
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    display: block;
+    inset: -1px -21px 0;
+    border: 1px solid #d9d9d9;
+
+    @include grid.md-block {
+      content: none;
+    }
+  }
+}
+
+.card__link-img {
+  padding-inline: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 107px;
+}
+
+.card__link {
+  color: inherit;
+  text-decoration: none;
+  max-width: 99px;
+  display: block;
+}
+
+.card__title {
+  margin-block: 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: var(--font-family-secondary, "Oswald"), "Arial", sans-serif;
+  text-transform: uppercase;
+}
+
+.card__details {
+  margin-block: 15px 0;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.card__details-block {
+  font-size: inherit;
+  line-height: inherit;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10px;
+  color: #444444;
+}
+
+.card__details-desc {
+  margin-left: 0;
+}
+
+.card__button {
+  grid-column: -1 / 1;
+  width: 100%;
+}
+
+.card--more {
+  padding-top: 78px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-image: url("./../../icons/i");
+
+  & .card__details {
+    margin-top: 10px;
+  }
+}
+
+.card--line {
+  padding-block: 11px 19px;
+  row-gap: 15px;
+
+  &::before {
+    inset: -1px 0 0;
+    border-inline: none;
+  }
+
+  & .card__link {
+    max-width: 100%;
+  }
+
+  & .card__content {
+    grid-column: -1 / 1;
+  }
+
+  & .card__details {
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 11px;
+  }
+}

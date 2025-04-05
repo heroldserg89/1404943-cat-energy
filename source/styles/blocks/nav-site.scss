@@ -6,7 +6,6 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  border-bottom: 1px solid #e6e6e6;
   font-family: var(--font-family-secondary, oswald), sans-serif;
 
   @include grid.md-block {
@@ -40,7 +39,7 @@
   text-decoration: none;
   text-transform: uppercase;
   color: inherit;
-  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
   padding-inline: 20px;
   transition-property: opacity;
   transition-duration: var(--transition-duration, 0, 2s);

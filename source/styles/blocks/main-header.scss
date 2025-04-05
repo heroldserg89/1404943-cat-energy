@@ -14,9 +14,11 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  border-bottom: 1px solid #d9d9d9;
 
   @include grid.md-block {
     padding-block: 24px;
+    border-bottom: none;
   }
 
   @include grid.lg-block {
@@ -31,7 +33,7 @@
   background-color: var(--background-color, #ffffff);
   transition: grid-template-rows 0.2s;
   position: absolute;
-  inset: 100% 0 auto;
+  inset: calc(100% + 1px) 0 auto;
   z-index: 1;
 
   &--menu-open {
