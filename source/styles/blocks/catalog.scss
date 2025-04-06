@@ -1,18 +1,45 @@
-@use "./../mixins/grid.scss";
+@use "./../module";
 
 .catalog {
+  overflow: hidden;
   padding-top: 27px;
+
+  @include module.grid-md-block {
+    padding-block: 35px 48px;
+  }
+
+  @include module.grid-lg-block {
+    padding-top: 15px;
+  }
 }
 
 .catalog__title {
+  font-weight: 400;
   font-size: 36px;
   line-height: 36px;
-  font-family: var(--font-family-secondary, "Oswald"), "Arial", sans-serif;
+  font-family: module.$var-font-family-secondary;
   margin-block: 0 40px;
+
+  @include module.grid-md-block {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 168px;
+  }
 }
 
 .catalog__list {
   margin: 0;
   padding-left: 0;
   list-style: none;
+
+  @include module.grid-md-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 143px 60px;
+  }
+
+  @include module.grid-lg-block {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 150px 80px;
+  }
 }

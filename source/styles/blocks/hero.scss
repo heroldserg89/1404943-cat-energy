@@ -156,7 +156,7 @@
 
 .hero__button {
   margin-top: 3px;
-  min-width: 100%;
+  width: auto;
 
   @include grid.md-block {
     min-width: 242px;

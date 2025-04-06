@@ -13,6 +13,7 @@
   padding: 10px 20px;
   text-decoration: none;
   text-align: center;
+  width: 100%;
   transition-property: background-color, color;
   transition-duration: var(--transition-duration, 0.2s);
 
@@ -27,6 +28,12 @@
       line-height: 26px;
       padding: 14px;
     }
+  }
+
+  &--size-xl {
+    font-size: 20px;
+    line-height: 26px;
+    padding: 15px;
   }
 
   @include grid.hover {

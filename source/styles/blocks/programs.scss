@@ -4,7 +4,7 @@
   padding-block: 20px;
 
   @include grid.md-block {
-    padding-bottom: 43px;
+    padding-block: 17px 43px;
   }
 
   @include grid.lg-block {
@@ -37,7 +37,7 @@
   background-color: #d9d9d9;
 
   @include grid.md-block {
-    padding: 73px 320px 64px 53px;
+    padding: 75px 320px 64px 53px;
   }
 
   @include grid.lg-block {

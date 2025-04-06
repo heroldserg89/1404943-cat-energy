@@ -1,4 +1,7 @@
 /* здесь используйте глобальные переменные */
+$font-family: var(--font-family, "Lato"), "Arial", sans-serif;
+$font-family-secondary: var(--font-family-secondary, "Oswald"), "Arial", sans-serif;
+
 :root {
   --font-family: "Lato";
   --font-family-secondary: "Oswald";

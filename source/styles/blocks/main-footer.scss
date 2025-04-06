@@ -9,16 +9,15 @@
   flex-direction: column;
   align-items: center;
   row-gap: 20px;
-  padding-block: 35px 40px;
+  padding-block: 40px;
 
   @include grid.md-block {
     flex-direction: row;
     justify-content: space-between;
-    padding-block: 60px 40px;
   }
 
   @include grid.lg-block {
-    padding-block: 71px 50px;
+    padding-block: 50px;
   }
 }
 

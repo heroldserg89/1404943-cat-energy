@@ -1,13 +1,43 @@
+@use "../module.scss";
+
 .additional {
-  padding-block: 27px;
+  padding-block: 22px;
+
+  @include module.grid-md-block {
+    padding-block: 26px;
+  }
+}
+
+.additional__content {
+  @include module.grid-lg-block {
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    column-gap: 80px;
+  }
+}
+
+.additional__title {
+  margin-block: 0 34px;
+
+  @include module.grid-md-block {
+    margin-bottom: 80px;
+  }
 }
 
 .additional__item-title {
-  font-family: var(--font-family-secondary, "Oswald"), "Arial", sans-serif;
+  font-family: module.$var-font-family-secondary;
   text-transform: uppercase;
 }
 
 .additional__list {
   margin-block: 0 35px;
   padding-left: 0;
+
+  @include module.grid-md-block {
+    margin-bottom: 70px;
+  }
+
+  @include module.grid-lg-block {
+    margin-bottom: 0;
+  }
 }

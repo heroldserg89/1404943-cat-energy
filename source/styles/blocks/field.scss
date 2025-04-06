@@ -1,0 +1,13 @@
+.field {
+  display: grid;
+  font-family: var(--font-family-secondary, "Oswald"), "Arial", sans-serif;
+}
+
+.field__input {
+  padding: 13px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: inherit;
+  flex-shrink: 1;
+  border: 1px solid #cdcdcd;
+}

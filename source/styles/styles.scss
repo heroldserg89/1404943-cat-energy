@@ -1,16 +1,16 @@
 /* GLOBAL */
-@use "./mixins/grid.scss";
 @use "./common/variables.scss";
 @use "./common/fonts.scss";
 @use "./common/global.scss";
 
 /* BLOCKS */
+@use "./blocks/page.scss";
+@use "./blocks/button.scss";
 @use "./blocks/main-header.scss";
 @use "./blocks/burger.scss";
 @use "./blocks/nav-site.scss";
 @use "./blocks/logo.scss";
 @use "./blocks/hero.scss";
-@use "./blocks/button.scss";
 @use "./blocks/main-footer.scss";
 @use "./blocks/social-list.scss";
 @use "./blocks/contacts.scss";
@@ -23,3 +23,5 @@
 @use "./blocks/card.scss";
 @use "./blocks/additional.scss";
 @use "./blocks/promo.scss";
+@use "./blocks/subscription.scss";
+@use "./blocks/field.scss";

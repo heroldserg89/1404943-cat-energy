@@ -1,0 +1,70 @@
+@use "../module.scss";
+
+.subscription {
+  padding-block: 20px 40px;
+  font-family: module.$var-font-family-secondary;
+
+  @include module.grid-md-block {
+    padding-block: 52px 80px;
+  }
+
+  @include module.grid-lg-block {
+    padding-block: 68px 103px;
+  }
+}
+
+.subscription__title {
+  margin-block: 0 30px;
+
+  @include module.grid-md-block {
+    margin-bottom: 67px;
+  }
+
+  @include module.grid-lg-block {
+    margin-bottom: 72px;
+  }
+}
+
+.subscription__text {
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  margin-block: 0 23px;
+
+  @include module.grid-md-block {
+    font-size: 24px;
+    line-height: 32px;
+    max-width: 600px;
+    margin-inline: auto;
+  }
+
+  @include module.grid-lg-block {
+    max-width: 750px;
+  }
+}
+
+.subscription__form {
+  max-width: 632px;
+  margin-inline: auto;
+  display: grid;
+
+  @include module.grid-md-block {
+    grid-template-columns: 1fr 256px;
+  }
+
+  @include module.grid-lg-block {
+    max-width: 750px;
+  }
+}
+
+.subscription__field {
+  margin-bottom: 15px;
+
+  @include module.grid-md-block {
+    margin-bottom: 0;
+  }
+}
+
+.subscription__button {
+  width: 100%;
+}
