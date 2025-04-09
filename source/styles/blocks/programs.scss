@@ -1,13 +1,13 @@
-@use "./../mixins/grid.scss";
+@use "../module.scss";
 
 .programs {
   padding-block: 20px;
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     padding-block: 17px 43px;
   }
 
-  @include grid.lg-block {
+  @include module.grid-lg-block {
     padding-block: 82px 35px;
   }
 }
@@ -20,11 +20,11 @@
   list-style: none;
   row-gap: 20px;
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     row-gap: 30px;
   }
 
-  @include grid.lg-block {
+  @include module.grid-lg-block {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
@@ -36,11 +36,11 @@
   padding: 29px 20px 22px;
   background-color: #d9d9d9;
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     padding: 75px 320px 64px 53px;
   }
 
-  @include grid.lg-block {
+  @include module.grid-lg-block {
     padding: 77px 52px 65px;
   }
 }
@@ -49,12 +49,12 @@
   position: absolute;
   top: 24px;
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     top: 88px;
     right: 63px;
   }
 
-  @include grid.lg-block {
+  @include module.grid-lg-block {
     top: 47px;
     right: auto;
   }
@@ -67,12 +67,12 @@
     border-radius: 50%;
     background-color: #68b738;
 
-    @include grid.md-block {
+    @include module.grid-md-block {
       width: 200px;
       height: 200px;
     }
 
-    @include grid.lg-block {
+    @include module.grid-lg-block {
       width: 100px;
       height: 100px;
     }
@@ -93,14 +93,14 @@
     bottom: 3px;
     left: 7px;
 
-    @include grid.md-block {
+    @include module.grid-md-block {
       width: 140px;
       height: 194px;
       bottom: 17px;
       left: 30px;
     }
 
-    @include grid.lg-block {
+    @include module.grid-lg-block {
       width: 70px;
       height: 97px;
       bottom: 10px;
@@ -115,14 +115,14 @@
     top: 11px;
     right: -9px;
 
-    @include grid.md-block {
+    @include module.grid-md-block {
       width: 268px;
       height: 112px;
       top: 44px;
       right: -34px;
     }
 
-    @include grid.lg-block {
+    @include module.grid-lg-block {
       width: 134px;
       height: 56px;
       top: 20px;
@@ -135,19 +135,19 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
-  font-family: var(--font-family-secondary, "Oswald"), "Arial", sans-serif;
+  font-family: module.$var-font-family-secondary;
   font-weight: 400;
   margin-block: 0 29px;
   margin-left: 70px;
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     font-size: 36px;
     line-height: 36px;
     margin-left: 0;
     margin-bottom: 24px;
   }
 
-  @include grid.lg-block {
+  @include module.grid-lg-block {
     margin-left: 162px;
     margin-bottom: 73px;
   }
@@ -157,11 +157,11 @@
   margin-block: 0 19px;
   padding-bottom: 23px;
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     margin-bottom: 35px;
   }
 
-  @include grid.lg-block {
+  @include module.grid-lg-block {
     margin-bottom: 8px;
   }
 }
@@ -170,7 +170,7 @@
   display: flex;
   align-items: center;
   column-gap: 17px;
-  font-family: var(--font-family-secondary, "Oswald"), "Arial", sans-serif;
+  font-family: module.$var-font-family-secondary;
   font-size: 16px;
   line-height: 1;
   text-transform: uppercase;
@@ -179,7 +179,7 @@
   transition-property: opacity;
   transition-duration: var(--transition-duration, 0.2s);
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     font-size: 20px;
     column-gap: 25px;
   }
@@ -197,7 +197,7 @@
     transition-duration: var(--transition-duration, 0, 2s);
   }
 
-  @include grid.hover {
+  @include module.grid-hover {
     &::after {
       width: 32px;
     }

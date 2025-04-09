@@ -1,4 +1,4 @@
-@use "./../mixins/grid.scss";
+@use "../module.scss";
 
 .main-footer {
   background-color: var(--background-color-secondary, #ffffff);
@@ -11,12 +11,12 @@
   row-gap: 20px;
   padding-block: 40px;
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     flex-direction: row;
     justify-content: space-between;
   }
 
-  @include grid.lg-block {
+  @include module.grid-lg-block {
     padding-block: 50px;
   }
 }
@@ -25,7 +25,7 @@
   width: 100%;
   border-block: 1px solid #d9d9d9;
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     border: none;
     width: auto;
     margin-left: 37px;
@@ -43,7 +43,7 @@
   text-decoration: none;
   column-gap: 23px;
 
-  @include grid.hover {
+  @include module.grid-hover {
     &::after {
       background-color: var(--background-color-accent, #68b738);
     }
@@ -53,7 +53,7 @@
     opacity: 0.3;
   }
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     width: unset;
     justify-content: unset;
   }

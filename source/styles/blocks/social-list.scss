@@ -1,4 +1,4 @@
-@use "../mixins/grid.scss";
+@use "../module.scss";
 
 .social-list {
   display: flex;
@@ -24,7 +24,7 @@
     transition-duration: var(--transition-duration, 0.2s);
   }
 
-  @include grid.hover {
+  @include module.grid-hover {
     &::before {
       background-color: var(--background-color-accent, #68b738);
     }

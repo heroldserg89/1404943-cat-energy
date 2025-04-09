@@ -1,6 +1,8 @@
+@use "../module.scss";
+
 .field {
   display: grid;
-  font-family: var(--font-family-secondary, "Oswald"), "Arial", sans-serif;
+  font-family: module.$var-font-family-secondary;
 }
 
 .field__input {

@@ -1,4 +1,4 @@
-@use "../mixins/grid.scss";
+@use "../module.scss";
 
 .nav-site {
   display: flex;
@@ -8,7 +8,7 @@
   padding: 0;
   font-family: var(--font-family-secondary, oswald), sans-serif;
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     border: none;
     flex-direction: row;
     gap: 10px 35px;
@@ -16,12 +16,12 @@
 }
 
 .nav-site--contrast {
-  @include grid.lg-block {
+  @include module.grid-lg-block {
     color: var(--color-text-secondary, #ffffff);
   }
 
   & .nav-site__link--current::after {
-    @include grid.lg-block {
+    @include module.grid-lg-block {
       background-color: var(--background-color, #ffffff);
     }
   }
@@ -44,7 +44,7 @@
   transition-property: opacity;
   transition-duration: var(--transition-duration, 0, 2s);
 
-  @include grid.hover {
+  @include module.grid-hover {
     opacity: 0.6;
   }
 
@@ -52,30 +52,26 @@
     opacity: 0.3;
   }
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     border: none;
     font-size: 18px;
     line-height: 133%;
     padding: 12px 0;
   }
 
-  @include grid.lg-block {
+  @include module.grid-lg-block {
     font-size: 20px;
   }
 }
 
 .nav-site__link--current::after {
-  @include grid.md-block {
+  @include module.grid-md-block {
     display: block;
     content: "";
     bottom: 3px;
     position: absolute;
-    width: calc(100% - 16px * 2);
     height: 2px;
     background-color: #68b738;
-
-    @include grid.md-block {
-      width: 100%;
-    }
+    width: 100%;
   }
 }

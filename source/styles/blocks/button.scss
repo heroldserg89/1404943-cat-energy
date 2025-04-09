@@ -1,4 +1,4 @@
-@use "../mixins/grid.scss";
+@use "../module.scss";
 
 .button {
   display: block;
@@ -6,7 +6,7 @@
   background-color: #68b738;
   font-size: 16px;
   line-height: 20px;
-  font-family: var(--font-family-secondary, "Oswald"), "Arial", sans-serif;
+  font-family: module.$var-font-family-secondary;
   text-transform: uppercase;
   border: none;
   color: #ffffff;
@@ -23,7 +23,7 @@
   }
 
   &--size-xl-from-md {
-    @include grid.md-block {
+    @include module.grid-md-block {
       font-size: 20px;
       line-height: 26px;
       padding: 14px;
@@ -36,7 +36,7 @@
     padding: 15px;
   }
 
-  @include grid.hover {
+  @include module.grid-hover {
     background-color: #5eaa2f;
   }
 

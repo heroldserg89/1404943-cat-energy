@@ -6,6 +6,7 @@
   <title>Главная страница</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="styles/styles.css" rel="stylesheet">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=dd5c6e05-bb7c-4970-af32-7910a7b70bc5&amp;lang=ru_RU"></script>
   <script src="scripts/index.js" defer></script>
 </head>
 
@@ -370,7 +371,7 @@
           </address>
         </div>
       </div>
-      <div class="contacts__maps">
+      <div class="contacts__maps" id="map">
         <picture>
           <source media="(min-width:1280px)" srcset="./images/maps/maps-desktop@1x.webp 1x, ./images/maps/maps-desktop@2x.webp 2x" width="1440" height="400" type="image/webp">
           <source media="(min-width:1280px)" srcset="./images/maps/maps-desktop@1x.jpg 1x, ./images/maps/maps-desktop@2x.jpg 2x" width="1440" height="400" type="image/jpeg">

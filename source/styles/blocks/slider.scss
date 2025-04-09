@@ -1,4 +1,4 @@
-@use "./../mixins/grid.scss";
+@use "../module.scss";
 
 .slider {
   --slider-color: #666666;
@@ -6,7 +6,7 @@
   height: 256px;
   position: relative;
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     width: 560px;
     height: 512px;
   }

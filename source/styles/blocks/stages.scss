@@ -1,14 +1,14 @@
-@use "./../mixins/grid.scss";
+@use "../module.scss";
 
 .stages {
   padding-bottom: 50px;
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     border-bottom: 1px solid #e6e6e6;
     padding-bottom: 47px;
   }
 
-  @include grid.lg-block {
+  @include module.grid-lg-block {
     border: none;
     padding-block: 36px 36px;
   }
@@ -20,7 +20,7 @@
   font-family: var(--font-family-secondary, "Oswald"), "Arial", sans-serif;
   margin-block: 0 40px;
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     font-size: 60px;
     line-height: 60px;
     margin-bottom: 30px;
@@ -36,13 +36,13 @@
   flex-direction: column;
   gap: 20px 37px;
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 37px 60px;
   }
 
-  @include grid.lg-block {
+  @include module.grid-lg-block {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
   }
@@ -54,7 +54,7 @@
   align-items: center;
   column-gap: 20px;
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     padding-top: 40px;
     row-gap: 31px;
     min-height: 280px;
@@ -73,7 +73,7 @@
     flex-shrink: 0;
 
 
-    @include grid.md-block {
+    @include module.grid-md-block {
       width: 80px;
       height: 80px;
     }
@@ -107,7 +107,7 @@
     font-family: var(--font-family-secondary, "Oswald"), "Arial", sans-serif;
     display: none;
 
-    @include grid.md-block {
+    @include module.grid-md-block {
       display: block;
       position: absolute;
       color: #f2f2f2;
@@ -121,7 +121,7 @@
 .stages__desc {
   margin-block: 0;
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     max-width: 245px;
   }
 }

@@ -1,16 +1,15 @@
-@use "../mixins/grid.scss";
-@use "../common/variables";
+@use "../module.scss";
 
 .hero {
-  font-family: var(--font-family-secondary, "Oswald"), "Arial", sans-serif;
+  font-family: module.$var-font-family-secondary;
   color: var(--color-text-secondary, #ffffff);
   position: relative;
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     color: var(--color-text, #000000);
   }
 
-  @include grid.lg-block {
+  @include module.grid-lg-block {
     position: static;
   }
 
@@ -23,11 +22,11 @@
     height: 63%;
     z-index: -2;
 
-    @include grid.md-block {
+    @include module.grid-md-block {
       display: none;
     }
 
-    @include grid.lg-block {
+    @include module.grid-lg-block {
       display: block;
       left: 50%;
       height: 100%;
@@ -47,7 +46,7 @@
     background-position: center;
     background-size: cover;
 
-    @include grid.lg-block {
+    @include module.grid-lg-block {
       background-image:
         image-set(
           "../../images/hero/hero-bg-desktop@1x.webp" 1x type("image/webp"),
@@ -70,12 +69,12 @@
   min-height: 480px;
   padding-top: 27px;
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     padding-top: 37px;
     min-height: 830px;
   }
 
-  @include grid.lg-block {
+  @include module.grid-lg-block {
     padding-top: 50px;
     min-height: 520px;
   }
@@ -87,12 +86,12 @@
   flex-direction: column;
   text-align: center;
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     padding-inline: 90px;
     text-align: left;
   }
 
-  @include grid.lg-block {
+  @include module.grid-lg-block {
     padding-inline: 80px;
     width: 50%;
   }
@@ -104,7 +103,7 @@
   margin-block: 0 25px;
   font-weight: 400;
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     font-size: 60px;
     margin-bottom: 40px;
   }
@@ -116,18 +115,18 @@
   text-transform: uppercase;
   margin-block: 0 29px;
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     font-size: 20px;
     margin-bottom: 45px;
   }
 
-  @include grid.lg-block {
+  @include module.grid-lg-block {
     margin-bottom: 50px;
   }
 }
 
 .hero__img-wrapper {
-  @include grid.md-block {
+  @include module.grid-md-block {
     order: 10;
     margin-inline: -90px;
   }
@@ -136,7 +135,7 @@
 .hero__img {
   vertical-align: top;
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     position: absolute;
     z-index: -1;
     margin-top: -25px;
@@ -144,7 +143,7 @@
     transform: translateX(-50%);
   }
 
-  @include grid.lg-block {
+  @include module.grid-lg-block {
     position: absolute;
     left: auto;
     margin-top: -80px;
@@ -158,7 +157,7 @@
   margin-top: 3px;
   width: auto;
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     min-width: 242px;
     align-self: start;
   }

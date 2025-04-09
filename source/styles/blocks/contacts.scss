@@ -26,6 +26,7 @@
     padding: 60px 75px 60px 80px;
     min-width: 565px;
     top: 95px;
+    z-index: 1;
   }
 }
 
@@ -72,8 +73,18 @@
   display: flex;
   justify-content: center;
   height: 362px;
+  position: relative;
+  overflow: hidden;
 
   @include module.grid-md-block {
     height: 400px;
   }
+}
+
+.contacts__maps-img {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }

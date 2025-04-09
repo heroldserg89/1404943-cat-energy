@@ -1,9 +1,9 @@
-@use "../mixins/grid.scss";
+@use "../module.scss";
 
 .main-header {
   background-color: transparent;
 
-  @include grid.lg-block {
+  @include module.grid-lg-block {
     position: relative;
   }
 }
@@ -16,12 +16,12 @@
   position: relative;
   border-bottom: 1px solid #d9d9d9;
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     padding-block: 24px;
     border-bottom: none;
   }
 
-  @include grid.lg-block {
+  @include module.grid-lg-block {
     padding-block: 55px;
   }
 }
@@ -44,13 +44,13 @@
     }
   }
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     position: relative;
     display: flex;
     margin-right: 3px;
   }
 
-  @include grid.lg-block {
+  @include module.grid-lg-block {
     background-color: transparent;
   }
 }
@@ -60,13 +60,13 @@
   min-height: 0;
   transition: visibility 0.2s;
 
-  @include grid.md-block {
+  @include module.grid-md-block {
     visibility: visible;
   }
 }
 
 .main-header__burger {
-  @include grid.md-block {
+  @include module.grid-md-block {
     display: none;
   }
 }

@@ -1,15 +1,15 @@
-@use "../mixins/grid.scss" as mixin;
+@use "../module.scss";
 
 .logo {
   display: flex;
   align-items: center;
   text-decoration: none;
 
-  @include mixin.md-block {
+  @include module.grid-md-block {
     column-gap: 13px;
   }
 
-  @include mixin.hover {
+  @include module.grid-hover {
     opacity: 0.8;
   }
 
@@ -25,12 +25,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    @include mixin.md-block {
+    @include module.grid-md-block {
       position: static;
       transform: translateX(0);
     }
 
-    @include mixin.lg-block {
+    @include module.grid-lg-block {
       width: 118px;
       height: 21px;
     }
