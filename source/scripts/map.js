@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  let ymaps;
   // Определяем центр карты в зависимости от ширины экрана
   const getCenterByScreenSize = () => {
     if (window.innerWidth < 1280) {
