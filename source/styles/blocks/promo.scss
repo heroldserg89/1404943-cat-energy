@@ -68,10 +68,10 @@
   &::before {
     background-image:
       image-set(
-        "../../images/promo/promo-bg@1x.webp" 1x type("image/webp"),
-        "../../images/promo/promo-bg@1x.jpg" 1x type("image/jpeg"),
-        "../../images/promo/promo-bg@2x.webp" 2x type("image/webp"),
-        "../../images/promo/promo-bg@2x.jpg" 2x type("image/jpeg"),
+        "../images/promo/promo-bg@1x.webp" 1x type("image/webp"),
+        "../images/promo/promo-bg@1x.jpg" 1x type("image/jpeg"),
+        "../images/promo/promo-bg@2x.webp" 2x type("image/webp"),
+        "../images/promo/promo-bg@2x.jpg" 2x type("image/jpeg"),
       ),
       linear-gradient(90deg, #515055, #403f44);
     background-position: center;

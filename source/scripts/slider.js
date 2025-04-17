@@ -11,6 +11,7 @@ const beforeAfterSlider = (x) => {
   change.style.left = `${shift}px`;
 };
 const pauseEvents = (e) => {
+  e.preventDefault();
   e.stopPropagation();
   return false;
 };
@@ -28,9 +29,9 @@ slider.addEventListener('mousemove', (e) => {
   if (!isActive) {
     return;
   }
-  let x = e.pageX;
-  x -= slider.getBoundingClientRect().left;
-  beforeAfterSlider(x);
+  let cursorPosition = e.pageX;
+  cursorPosition -= slider.getBoundingClientRect().left;
+  beforeAfterSlider(cursorPosition);
   pauseEvents(e);
 });
 change.addEventListener('touchstart', () => {
@@ -46,13 +47,10 @@ slider.addEventListener('touchmove', (e) => {
   if (!isActive) {
     return;
   }
-  let x;
-  let i;
-
-  for (i = 0; i < e.changedTouches.length; i++) {
-    x = e.changedTouches[i].pageX;
+  for (let i = 0; i < e.changedTouches.length; i++) {
+    let touchPosition = e.changedTouches[i].pageX;
+    touchPosition -= slider.getBoundingClientRect().left;
+    beforeAfterSlider(touchPosition);
+    pauseEvents(e);
   }
-  x -= slider.getBoundingClientRect().left;
-  beforeAfterSlider(x);
-  pauseEvents(e);
 });
