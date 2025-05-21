@@ -23,13 +23,11 @@
     transition-property: background-color;
     transition-duration: var(--transition-duration, 0.2s);
   }
-
   @include module.grid-hover {
     &::before {
       background-color: var(--background-color-accent, #68b738);
     }
   }
-
   &:active {
     transition-property: opacity;
     transition-duration: var(--transition-duration, 0.2s);
