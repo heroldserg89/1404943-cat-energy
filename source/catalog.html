@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html class="page" lang="ru-RU">
+<html class="page no-js" lang="ru-RU">
 
 <head>
   <meta charset="UTF-8">
   <title>Главная страница</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link href="styles/styles.css" rel="stylesheet">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=dd5c6e05-bb7c-4970-af32-7910a7b70bc5&amp;lang=ru_RU" defer></script>
   <script src="scripts/index.js" defer></script>
@@ -13,17 +17,23 @@
 <body class="page__body">
   <header class="page__main-header main-header">
     <nav class="main-header__nav container">
-      <a class="main-header__logo logo" href="/" aria-current="page">
-        <picture>
-          <source media="(min-width:1280px)" srcset="./images/logo-desktop.svg" width="70" height="59" type="image/svg+xml">
-          <source media="(min-width:768px)" srcset="./images/logo-tablet.svg" width="60" height="50" type="image/svg+xml">
-          <img class="logo__img" src="./images/logo-mobile.svg" width="33" height="38" alt="Логотип">
-        </picture>
-        <picture>
-          <source media="(min-width:1280px)" srcset="./images/logo-text.svg" width="118" height="21" type="image/svg+xml">
-          <img class="logo__img logo__img--text" src="./images/logo-text.svg" width="101" height="18" alt="Логотип">
-        </picture>
-      </a>
+      <div class="main-header__block">
+        <a class="main-header__logo logo" href="/" aria-current="page">
+          <picture>
+            <source media="(min-width:1280px)" srcset="./images/logo-desktop.svg" width="70" height="59" type="image/svg+xml">
+            <source media="(min-width:768px)" srcset="./images/logo-tablet.svg" width="60" height="50" type="image/svg+xml">
+            <img class="logo__img" src="./images/logo-mobile.svg" width="33" height="38" alt="Логотип">
+          </picture>
+          <picture>
+            <source media="(min-width:1280px)" srcset="./images/logo-text.svg" width="118" height="21" type="image/svg+xml">
+            <img class="logo__img logo__img--text" src="./images/logo-text.svg" width="101" height="18" alt="Логотип">
+          </picture>
+        </a>
+        <button class="main-header__burger burger" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+          <span class="burger__line"></span>
+        </button>
+      </div>
       <div class="main-header__nav-block">
         <ul class="main-header__nav-site nav-site">
           <li class="nav-site__item">
@@ -37,16 +47,14 @@
           </li>
         </ul>
       </div>
-      <button class="main-header__burger burger" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-        <span class="burger__line"></span>
-      </button>
     </nav>
   </header>
   <main class="page__content">
     <section class="catalog">
       <div class="catalog__wrapper container">
-        <h1 class="catalog__title">Каталог продукции</h1>
+        <h1 class="catalog__title headline headline--size-xl">
+          <span class="headline__text">Каталог продукции</span>
+        </h1>
         <ul class="catalog__list">
           <li class="catalog__item card card--block">
             <a class="card__link-img" href="#">
@@ -278,8 +286,8 @@
     </section>
     <section class="additional">
       <div class="additional__wrapper container">
-        <h2 class="additional__title title-block">
-          <span class="title-block__text">Дополнительные товары</span>
+        <h2 class="additional__title headline headline--size-smale headline--decor">
+          <span class="headline__text">Дополнительные товары</span>
         </h2>
         <div class="additional__content">
           <ul class="additional__list">
@@ -340,16 +348,16 @@
               <a class="card__button button" href="#">Заказать</a>
             </li>
           </ul>
-          <p class="additional__promo promo">
-            <span class="promo__text">Закажите все<br> и получите чехол для кота в подарок!</span>
+          <p class="additional__promo">
+            <span class="additional__promo-text">Закажите все<br> и получите чехол для кота в подарок!</span>
           </p>
         </div>
       </div>
     </section>
     <section class="subscription">
       <div class="subscription__wrapper container">
-        <h2 class="subscription__title title-block">
-          <span class="title-block__text">Акции и новинки</span>
+        <h2 class="subscription__title headline headline--size-smale headline--decor">
+          <span class="headline__text">Акции и новинки</span>
         </h2>
         <p class="subscription__text">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
         <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="post">

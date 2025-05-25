@@ -15,14 +15,9 @@
 }
 
 .stages__title {
-  font-size: 36px;
-  line-height: 40px;
-  font-family: var(--font-family-secondary, "Oswald"), "Arial", sans-serif;
-  margin-block: 0 40px;
+  margin-bottom: 44px;
 
   @include module.grid-md-block {
-    font-size: 60px;
-    line-height: 60px;
     margin-bottom: 30px;
   }
 }

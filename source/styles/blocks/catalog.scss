@@ -14,15 +14,9 @@
 }
 
 .catalog__title {
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 36px;
-  font-family: module.$var-font-family-secondary;
-  margin-block: 0 40px;
+  margin-bottom: 40px;
 
   @include module.grid-md-block {
-    font-size: 60px;
-    line-height: 60px;
     margin-bottom: 168px;
   }
 }

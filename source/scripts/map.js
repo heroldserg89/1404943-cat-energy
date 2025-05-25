@@ -3,7 +3,7 @@ const getCenterByScreenSize = () => {
   if (window.innerWidth < 1280) {
     return [59.938631, 30.323037];
   } else {
-    return [59.938565, 30.320227];
+    return [59.938565, 30.317988];
   }
 };
 
@@ -23,10 +23,9 @@ const placemarkImageSet = (placemark) => {
   }
 };
 // Инициализация карты
-const ymaps = window.ymaps;
-ymaps.ready(init);
+export const ymaps = window.ymaps;
 
-function init() {
+export const init = () => {
   const center = getCenterByScreenSize();
 
   const map = new ymaps.Map('map', {
@@ -61,4 +60,4 @@ function init() {
     placemark.geometry.setCoordinates([59.938631, 30.323037]);
     placemarkImageSet(placemark);
   });
-}
+};

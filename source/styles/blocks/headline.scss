@@ -1,0 +1,77 @@
+@use "../module.scss";
+
+.headline {
+  font-family: module.$var-font-family-secondary;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.headline--size-xl {
+  font-size: 36px;
+  line-height: 1;
+
+  @include module.grid-md-block {
+    font-size: 60px;
+  }
+}
+
+.headline--size-large {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.headline--size-smale {
+  font-size: 24px;
+  line-height: 1;
+
+  @include module.grid-md-block {
+    font-size: 32px;
+  }
+
+  @include module.grid-lg-block {
+    font-size: 40px;
+  }
+}
+
+.headline--decor {
+  @include module.grid-md-block {
+    padding-inline: 40px;
+  }
+
+  @include module.grid-lg-block {
+    padding-inline: 0;
+    display: inline-block;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    margin-top: 10px;
+    inset-inline: 0;
+    height: 2px;
+    background-color: #68b738;
+    z-index: -1;
+
+    @include module.grid-md-block {
+      margin-top: 15px;
+    }
+  }
+}
+
+.headline--decor .headline__text::before {
+  content: "";
+  display: block;
+  inset: 0 -40px;
+  position: absolute;
+  z-index: -1;
+  background-color: var(--background-color, #ffffff);
+
+  @include module.grid-md-block {
+    inset-inline: -40px;
+  }
+}
+
+.headline__text {
+  position: relative;
+}

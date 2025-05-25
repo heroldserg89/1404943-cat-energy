@@ -34,6 +34,12 @@ $break-xxl: 1920px;
   }
 }
 
+@mixin sm-block-only() {
+  @media screen and (width < $break-md) {
+    @content;
+  }
+}
+
 @mixin hover() {
   @media (any-hover: hover) {
     &:hover {

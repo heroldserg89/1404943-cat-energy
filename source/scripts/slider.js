@@ -4,7 +4,7 @@ const pauseEvents = (e) => {
   return false;
 };
 
-const slider = (sliderElement) => {
+export const slider = (sliderElement) => {
   const sliderBlock = document.querySelector(sliderElement);
   if (!sliderBlock) {
     return;
@@ -59,5 +59,3 @@ const slider = (sliderElement) => {
     }
   });
 };
-slider('.slider');
-

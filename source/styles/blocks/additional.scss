@@ -17,7 +17,7 @@
 }
 
 .additional__title {
-  margin-block: 0 34px;
+  margin-block: 0 38px;
 
   @include module.grid-md-block {
     margin-bottom: 80px;
@@ -40,4 +40,108 @@
   @include module.grid-lg-block {
     margin-bottom: 0;
   }
+}
+
+.additional__promo {
+  position: relative;
+  display: block;
+  padding: 58px 58px 43px;
+  text-align: center;
+  color: var(--color-text-secondary, #ffffff);
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image:
+    linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+    image-set(
+      "../images/promo/promo-bg@1x.webp" 1x type("image/webp"),
+      "../images/promo/promo-bg@1x.jpg" 1x type("image/jpeg"),
+      "../images/promo/promo-bg@2x.webp" 2x type("image/webp"),
+      "../images/promo/promo-bg@2x.jpg" 2x type("image/jpeg"),
+    ),
+    linear-gradient(90deg, #515055, #403f44);
+
+  @include module.grid-md-block {
+    background-image:
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      image-set(
+        "../images/promo/promo-bg-tablet@1x.webp" 1x type("image/webp"),
+        "../images/promo/promo-bg-tablet@1x.jpg" 1x type("image/jpeg"),
+        "../images/promo/promo-bg-tablet@2x.webp" 2x type("image/webp"),
+        "../images/promo/promo-bg-tablet@2x.jpg" 2x type("image/jpeg"),
+      ),
+      linear-gradient(90deg, #515055, #403f44);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 125px 60px 77px;
+  }
+
+  @include module.grid-lg-block {
+    background-image:
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      image-set(
+        "../images/promo/promo-bg-desktop@1x.webp" 1x type("image/webp"),
+        "../images/promo/promo-bg-desktop@1x.jpg" 1x type("image/jpeg"),
+        "../images/promo/promo-bg-desktop@2x.webp" 2x type("image/webp"),
+        "../images/promo/promo-bg-desktop@2x.jpg" 2x type("image/jpeg"),
+      ),
+      linear-gradient(90deg, #515055, #403f44);
+    display: block;
+    padding: 55px 42px 43px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    mask-image: url("./../../icons/icon-gift.svg");
+    width: 78px;
+    height: 80px;
+    margin-inline: auto;
+    background: currentColor;
+
+    @include module.grid-md-block {
+      margin-inline: 0;
+    }
+
+    @include module.grid-lg-block {
+      margin-inline: auto;
+      margin-bottom: 48px;
+    }
+  }
+}
+
+.additional__promo-text {
+  display: block;
+  margin-top: 47px;
+
+  @include module.grid-md-block {
+    max-width: 161px;
+    margin-top: 0;
+    align-items: center;
+    text-align: left;
+  }
+
+  @include module.grid-lg-block {
+    text-align: center;
+  }
+
+  //&::before,
+  //&::after {
+  //  content: "";
+  //  position: absolute;
+  //  inset: 0;
+  //  z-index: -1;
+  //}
+  //
+  //&::before {
+  //
+  //  background-position: center;
+  //  background-repeat: no-repeat;
+  //  background-size: cover;
+  //}
+  //
 }

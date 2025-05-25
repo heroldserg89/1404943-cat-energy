@@ -6,6 +6,7 @@
 /* BLOCKS */
 @use "./blocks/page.scss";
 @use "./blocks/button.scss";
+@use "./blocks/headline.scss";
 @use "./blocks/main-header.scss";
 @use "./blocks/burger.scss";
 @use "./blocks/nav-site.scss";
@@ -19,9 +20,7 @@
 @use "./blocks/example.scss";
 @use "./blocks/slider.scss";
 @use "./blocks/catalog.scss";
-@use "./blocks/title-block.scss";
 @use "./blocks/card.scss";
 @use "./blocks/additional.scss";
-@use "./blocks/promo.scss";
 @use "./blocks/subscription.scss";
 @use "./blocks/field.scss";
