@@ -21,18 +21,18 @@
     content: "";
     background-color: #666666;
     transition-property: background-color;
-    transition-duration: var(--transition-duration, 0.2s);
+    transition-duration: module.$var-transition-duration;
   }
 
   @include module.grid-hover {
     &::before {
-      background-color: var(--background-color-accent, #68b738);
+      background-color: module.$var-bg-color-accent;
     }
   }
 
   &:active {
     transition-property: opacity;
-    transition-duration: var(--transition-duration, 0.2s);
+    transition-duration: module.$var-transition-duration;
     opacity: 0.3;
   }
 

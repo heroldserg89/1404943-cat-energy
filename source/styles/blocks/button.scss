@@ -3,22 +3,22 @@
 .button {
   display: block;
   cursor: pointer;
-  background-color: #68b738;
+  background-color: module.$var-bg-color-accent;
   font-size: 16px;
   line-height: 20px;
   font-family: module.$var-font-family-secondary;
   text-transform: uppercase;
   border: none;
-  color: #ffffff;
+  color: module.$var-color-text-secondary;
   padding: 10px 20px;
   text-decoration: none;
   text-align: center;
   width: 100%;
   transition-property: background-color, color;
-  transition-duration: var(--transition-duration, 0.2s);
+  transition-duration: module.$var-transition-duration;
 
   &--secondary {
-    background-color: #f2f2f2;
+    background-color: module.$var-bg-color-secondary;
     color: #444444;
   }
 
@@ -37,7 +37,7 @@
   }
 
   @include module.grid-hover {
-    background-color: #5eaa2f;
+    background-color: module.$var-bg-color-button;
   }
 
   &:active {

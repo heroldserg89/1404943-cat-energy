@@ -14,7 +14,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 1px solid module.$var-border-color-accent;
 
   @include module.grid-md-block {
     padding-block: 24px;
@@ -46,9 +46,9 @@
   margin-inline: -20px;
   grid-template-rows: 0fr;
   overflow: hidden;
-  background-color: var(--background-color, #ffffff);
+  background-color: module.$var-bg-color;
   transition: grid-template-rows 0.2s;
-  border-top: 1px solid #d9d9d9;
+  border-top: 1px solid module.$var-border-color-accent;
   position: absolute;
   top: 100%;
   z-index: 1;

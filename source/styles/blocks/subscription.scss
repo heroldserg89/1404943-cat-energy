@@ -30,6 +30,7 @@
   font-size: 16px;
   line-height: 24px;
   margin-block: 0 23px;
+  color: module.$var-color-text-accent;
 
   @include module.grid-md-block {
     font-size: 24px;

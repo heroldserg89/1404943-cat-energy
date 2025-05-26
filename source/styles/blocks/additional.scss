@@ -47,7 +47,7 @@
   display: block;
   padding: 58px 58px 43px;
   text-align: center;
-  color: var(--color-text-secondary, #ffffff);
+  color: module.$var-color-text-secondary;
   font-size: 16px;
   line-height: 20px;
   margin: 0;
@@ -55,25 +55,25 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-image:
-    linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+    linear-gradient(module.$var-bg-color-accent-opacity, module.$var-bg-color-accent-opacity),
     image-set(
       "../images/promo/promo-bg@1x.webp" 1x type("image/webp"),
       "../images/promo/promo-bg@1x.jpg" 1x type("image/jpeg"),
       "../images/promo/promo-bg@2x.webp" 2x type("image/webp"),
       "../images/promo/promo-bg@2x.jpg" 2x type("image/jpeg"),
     ),
-    linear-gradient(90deg, #515055, #403f44);
+    module.$var-line-gradient;
 
   @include module.grid-md-block {
     background-image:
-      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      linear-gradient(module.$var-bg-color-accent-opacity, module.$var-bg-color-accent-opacity),
       image-set(
         "../images/promo/promo-bg-tablet@1x.webp" 1x type("image/webp"),
         "../images/promo/promo-bg-tablet@1x.jpg" 1x type("image/jpeg"),
         "../images/promo/promo-bg-tablet@2x.webp" 2x type("image/webp"),
         "../images/promo/promo-bg-tablet@2x.jpg" 2x type("image/jpeg"),
       ),
-      linear-gradient(90deg, #515055, #403f44);
+      module.$var-line-gradient;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -89,7 +89,7 @@
         "../images/promo/promo-bg-desktop@2x.webp" 2x type("image/webp"),
         "../images/promo/promo-bg-desktop@2x.jpg" 2x type("image/jpeg"),
       ),
-      linear-gradient(90deg, #515055, #403f44);
+      module.$var-line-gradient;
     display: block;
     padding: 55px 42px 43px;
   }

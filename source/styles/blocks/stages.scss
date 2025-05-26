@@ -62,7 +62,7 @@
     display: block;
     width: 60px;
     height: 60px;
-    background-color: #68b738;
+    background-color: module.$var-bg-color-accent;
     background-repeat: no-repeat;
     background-position: center;
     flex-shrink: 0;
@@ -99,7 +99,7 @@
     content: counter(stages);
     font-size: 280px;
     line-height: 1;
-    font-family: var(--font-family-secondary, "Oswald"), "Arial", sans-serif;
+    font-family: module.$var-font-family-secondary;
     display: none;
 
     @include module.grid-md-block {

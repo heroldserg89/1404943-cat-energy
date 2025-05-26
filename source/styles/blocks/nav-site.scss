@@ -6,7 +6,8 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  font-family: var(--font-family-secondary, oswald), sans-serif;
+  font-family: module.$var-font-family-secondary;
+  color: module.$var-color-text-accent;
 
   @include module.grid-md-block {
     border: none;
@@ -17,12 +18,12 @@
 
 .nav-site--contrast {
   @include module.grid-lg-block {
-    color: var(--color-text-secondary, #ffffff);
+    color: module.$var-color-text-secondary;
   }
 
   & .nav-site__link--current::after {
     @include module.grid-lg-block {
-      background-color: var(--background-color, #ffffff);
+      background-color: module.$var-bg-color;
     }
   }
 }
@@ -42,7 +43,7 @@
   border-bottom: 1px solid #e6e6e6;
   padding-inline: 20px;
   transition-property: opacity;
-  transition-duration: var(--transition-duration, 0, 2s);
+  transition-duration: module.$var-transition-duration;
 
   @include module.grid-hover {
     opacity: 0.6;
@@ -71,7 +72,7 @@
     bottom: 3px;
     position: absolute;
     height: 2px;
-    background-color: #68b738;
+    background-color: module.$var-bg-color-accent;
     width: 100%;
   }
 }

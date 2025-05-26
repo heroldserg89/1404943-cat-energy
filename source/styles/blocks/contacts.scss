@@ -5,7 +5,7 @@
 }
 
 .contacts__wrapper {
-  background-color: var(--background-color, #ffffff);
+  background-color: module.$var-bg-color;
 }
 
 .contacts__block {
@@ -22,7 +22,7 @@
 
   @include module.grid-lg-block {
     position: absolute;
-    background-color: var(--background-color, #ffffff);
+    background-color: module.$var-bg-color;
     padding: 60px 75px 60px 80px;
     min-width: 565px;
     top: 95px;
@@ -32,7 +32,7 @@
 
 
 .contacts__title {
-  font-family: var(--font-family-secondary, "oswald"), "Arial", sans-serif;
+  font-family: module.$var-font-family-secondary;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 20px;
@@ -49,7 +49,6 @@
   font-style: normal;
   font-size: 14px;
   line-height: 20px;
-  color: #444444;
 
   @include module.grid-md-block {
     text-align: right;

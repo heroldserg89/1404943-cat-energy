@@ -2,11 +2,11 @@
 
 .example {
   --padding-bg: 619px;
-  background-color: #eaeaea;
+  background-color: module.$var-bg-color-example;
   padding-block: 25px 40px;
 
   @include module.grid-md-block {
-    background-image: linear-gradient(var(--background-color, #ffffff) var(--padding-bg, 619px), #eaeaea var(--padding-bg, 619px));
+    background-image: linear-gradient(module.$var-bg-color var(--padding-bg, 619px), module.$var-bg-color-example var(--padding-bg, 619px));
     padding-block: 45px 100px;
   }
 
@@ -81,6 +81,7 @@
   text-align: center;
   font-family: module.$var-font-family-secondary;
   font-weight: 400;
+  color: module.$var-color-text-accent;
 }
 
 .example__block--block {
@@ -92,12 +93,12 @@
     font-family: module.$var-font-family;
     font-size: 12px;
     line-height: 1;
-    width: calc(100% - (18px * 2));
-    background-color: #eaeaea;
+    width: calc(100% - (22px * 2));
+    background-color: module.$var-bg-color-example;
     margin-top: -10px;
 
     @include module.grid-md-block {
-      background-color: var(--background-color, #ffffff);
+      background-color: module.$var-bg-color;
       width: calc(100% - (10px * 2));
       display: inline-block;
       font-size: 14px;
@@ -105,13 +106,13 @@
     }
 
     @include module.grid-lg-block {
-      background-color: #eaeaea;
+      background-color: module.$var-bg-color-example;
     }
   }
 
   & .example__desc-text {
     align-self: normal;
-    border: 1px solid #cdcdcd;
+    border: 1px solid module.$var-border-color;
     order: -1;
     font-size: 24px;
     line-height: 24px;

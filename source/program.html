@@ -9,15 +9,15 @@
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link href="styles/styles.css" rel="stylesheet">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=dd5c6e05-bb7c-4970-af32-7910a7b70bc5&amp;lang=ru_RU" defer></script>
   <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
-  <header class="page__main-header main-header">
+  <header class="page__main-header main-header" data-test="header">
     <nav class="main-header__nav container">
       <div class="main-header__block">
         <a class="main-header__logo logo" href="/" aria-current="page">
@@ -52,54 +52,10 @@
     </nav>
   </header>
   <main class="page__content">
-    <div class="container">
-      <section class="program">
-        <h1 class="program__title headline headline--size-xl">
-          <span class="headline__text">Подбор программы</span>
-        </h1>
-        <form class="program__form form-program" action="https://echo.htmlacademy.ru/" method="get">
-          <h2 class="form-program__title">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
-          <fieldset class="form-program__block">
-            <legend class="visually-hidden">Данные кота</legend>
-            <label class="form-program__field field">
-              <span class="field__text">Имя:</span>
-              <input class="field__input" type="input" name="cat-name" placeholder="Введите имя кота" required value="Барсик">
-            </label>
-            <label class="form-program__field field">
-              <span class="field__text">Вес (кг):</span>
-              <input class="field__input" type="number" name="cat-weight" placeholder="Введите вес кота" required value="7">
-            </label>
-            <label class="form-program__field field">
-              <span class="field__text">Возраст (лет):</span>
-              <input class="field__input" type="number" name="cat-age" placeholder="Введите возраст кота" value="7">
-            </label>
-          </fieldset>
-          <fieldset class="form-program__block">
-            <legend class="visually-hidden">Выбор программы</legend>
-            <label class="form-program__field field">
-              <input class="field__input" type="radio" name="program" value="weight-loss" checked>
-              <span class="field__text">Похудение</span>
-            </label>
-            <label class="form-program__field field">
-              <input class="field__input" type="radio" name="program" value="mass-gain">
-              <span class="field__text">Набор массы</span>
-            </label>
-            <label class="form-program__field field">
-              <input class="field__input" type="radio" name="program" value="weight-loss">
-              <span class="field__text">Не знаю (Нужен ваш совет)</span>
-            </label>
-            <fieldset class="form-program__block">
-              <legend class="form-program__legend headline headline--decor headline--size-small">
-                <div class="healine__text">Контактные данные (владельца кота)</div>
-              </legend>
-            </fieldset>
-          </fieldset>
-        </form>
-      </section>
-    </div>
+    <div class="container"></div>
   </main>
-  <footer class="page__footer main-footer">
-    <div class="main-footer__contacts contacts">
+  <footer class="page__footer main-footer" data-test="footer">
+    <div class="main-footer__contacts contacts" data-test="contacts">
       <div class="contacts__wrapper container">
         <div class="contacts__block">
           <h2 class="contacts__title">Приглашаем<br> к сотрудничеству дилеров!</h2>

@@ -1,7 +1,7 @@
 @use "../module.scss";
 
 .slider {
-  --slider-color: #666666;
+  --slider-color: #{module.$var-bg-color-secondary-dark};
   width: 280px;
   height: 256px;
   position: relative;
@@ -28,9 +28,9 @@
   border-radius: 5px;
   left: calc(50% - 2px);
   z-index: 10;
-  background-color: var(--slider-color, #666666);
+  background-color: var(--slider-color, module.$var-bg-color-secondary-dark);
   border: none;
-  transition-duration: var(--transition-duration, 0.2);
+  transition-duration: module.$var-transition-duration;
   transition-property: background-color, opacity;
 
   &::before {
@@ -40,9 +40,9 @@
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    border: 2px solid var(--slider-color, #666666);
-    background-color: #ffffff;
-    transition-duration: var(--transition-duration, 0.2);
+    border: 2px solid var(--slider-color, module.$var-bg-color-secondary-dark);
+    background-color: module.$var-bg-color;
+    transition-duration: module.$var-transition-duration;
     transition-property: border-color;
   }
 
@@ -51,19 +51,19 @@
     content: "";
     display: block;
     mask-image: url("./../../icons/slider-button.svg");
-    background-color: var(--slider-color, #666666);
+    background-color: var(--slider-color, module.$var-bg-color-secondary-dark);
     width: 24px;
     height: 18px;
-    transition-duration: var(--transition-duration, 0.2);
+    transition-duration: module.$var-transition-duration;
     transition-property: background-color;
   }
 
   &:hover {
-    --slider-color: #68b738;
+    --slider-color: #{module.$var-bg-color-accent};
   }
 
   &:active {
-    --slider-color: #5eaa2f;
+    --slider-color: #{module.$var-bg-color-button};
     opacity: 0.6;
   }
 

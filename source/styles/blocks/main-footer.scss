@@ -1,7 +1,7 @@
 @use "../module.scss";
 
 .main-footer {
-  background-color: var(--background-color-secondary, #ffffff);
+  background-color: module.$var-bg-color;
 }
 
 .main-footer__wrapper {
@@ -23,7 +23,7 @@
 
 .main-footer__social {
   width: 100%;
-  border-block: 1px solid #d9d9d9;
+  border-block: 1px solid module.$var-border-color-accent;
 
   @include module.grid-md-block {
     border: none;
@@ -39,13 +39,13 @@
   justify-content: space-between;
   font-size: 16px;
   line-height: 20px;
-  color: #444444;
+  color: inherit;
   text-decoration: none;
   column-gap: 23px;
 
   @include module.grid-hover {
     &::after {
-      background-color: var(--background-color-accent, #68b738);
+      background-color: module.$var-bg-color-accent;
     }
   }
 
@@ -64,5 +64,5 @@
   width: 27px;
   height: 34px;
   mask-image: url("./../../icons/logo-htmlacademy.svg");
-  background-color: #666666;
+  background-color: module.$var-bg-color-secondary-dark;
 }

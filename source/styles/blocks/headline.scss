@@ -3,6 +3,7 @@
 .headline {
   font-family: module.$var-font-family-secondary;
   font-weight: 400;
+  color: module.$var-color-text-accent;
   margin-top: 0;
 }
 
@@ -50,7 +51,7 @@
     margin-top: 10px;
     inset-inline: 0;
     height: 2px;
-    background-color: #68b738;
+    background-color: module.$var-bg-color-accent;
     z-index: -1;
 
     @include module.grid-md-block {
@@ -65,7 +66,7 @@
   inset: 0 -40px;
   position: absolute;
   z-index: -1;
-  background-color: var(--background-color, #ffffff);
+  background-color: module.$var-bg-color;
 
   @include module.grid-md-block {
     inset-inline: -40px;

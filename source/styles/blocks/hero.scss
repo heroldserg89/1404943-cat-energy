@@ -2,11 +2,11 @@
 
 .hero {
   font-family: module.$var-font-family-secondary;
-  color: var(--color-text-secondary, #ffffff);
+  color: module.$var-color-text-secondary;
   position: relative;
 
   @include module.grid-md-block {
-    color: var(--color-text, #000000);
+    color: module.$var-color-text-accent;
   }
 
   @include module.grid-lg-block {
@@ -41,7 +41,7 @@
         "../images/hero/hero-bg@2x.webp" 2x type("image/webp"),
         "../images/hero/hero-bg@2x.png" 2x type("image/png"),
       ),
-      linear-gradient(90deg, #515055, #403f44);
+      module.$var-line-gradient;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -54,14 +54,14 @@
           "../images/hero/hero-bg-desktop@2x.webp" 2x type("image/webp"),
           "../images/hero/hero-bg-desktop@2x.png" 2x type("image/png")
         ),
-        linear-gradient(90deg, #515055, #403f44);
+        module.$var-line-gradient;
       background-position: left center;
       background-size: auto 100%;
     }
   }
 
   &::after {
-    background-color: rgba(#68b738, 0.85);
+    background-color: module.$var-bg-color-accent-opacity;
   }
 }
 
@@ -102,6 +102,7 @@
   line-height: 1;
   margin-bottom: 25px;
   font-weight: 400;
+  color: inherit;
 
   @include module.grid-md-block {
     font-size: 60px;
