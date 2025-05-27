@@ -19,6 +19,8 @@
   @include module.grid-md-block {
     padding-block: 24px;
     border-bottom: none;
+    flex-wrap: nowrap;
+    gap: 20px;
   }
 
   @include module.grid-lg-block {
@@ -72,6 +74,9 @@
 
   @include module.grid-lg-block {
     background-color: transparent;
+    max-width: 50%;
+    padding-left: 20px;
+    flex-wrap: wrap;
   }
 
   .no-js & {

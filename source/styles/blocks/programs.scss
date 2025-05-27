@@ -34,7 +34,7 @@
 .programs__item {
   position: relative;
   padding: 29px 20px 22px;
-  background-color: #d9d9d9;
+  background-color: module.$var-bg-color-secondary;
 
   @include module.grid-md-block {
     padding: 75px 320px 64px 53px;
@@ -156,10 +156,12 @@
 
 .programs__desc {
   margin-block: 0 19px;
-  padding-bottom: 23px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid module.$var-border-color-accent;
 
   @include module.grid-md-block {
     margin-bottom: 35px;
+    border-bottom: none;
   }
 
   @include module.grid-lg-block {

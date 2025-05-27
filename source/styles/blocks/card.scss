@@ -9,6 +9,7 @@
     position: absolute;
     border: 1px solid module.$var-border-color;
     inset: -1px -50px 0;
+    z-index: -1;
   }
 }
 

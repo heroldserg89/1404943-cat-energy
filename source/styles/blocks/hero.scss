@@ -44,7 +44,7 @@
       module.$var-line-gradient;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
 
     @include module.grid-lg-block {
       background-image:
